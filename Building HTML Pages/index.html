@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Traffic Volume Estimation</title>
+</head>
+<body background="https://thumbs.dreamstime.com/z/moscow-russia-july-car-traffic-highway-city-car-traffic-highway-city-158269233.jpg" style="background-size:cover; color:white; font-family: Arial, sans-serif;">
+
+    <div class="container">
+        <h2 style="text-align:center;">Traffic Volume Estimation</h2>
+        <form action="/predict" method="post" style="margin: 50px;">
+            <label for="holiday">Holiday:</label>
+            <select name="holiday" required>
+                <option value="None">None</option>
+                <option value="Columbus Day">Columbus Day</option>
+                <option value="Independence Day">Independence Day</option>
+                <option value="Christmas Day">Christmas Day</option>
+                <option value="Veterans Day">Veterans Day</option>
+                <option value="Thanksgiving Day">Thanksgiving Day</option>
+                <option value="New Years Day">New Year's Day</option>
+                <option value="Washingtons Birthday">Washington's Birthday</option>
+                <option value="Memorial Day">Memorial Day</option>
+                <option value="Martin Luther King Jr Day">Martin Luther King Jr Day</option>
+                <option value="Labor Day">Labor Day</option>
+            </select><br><br>
+
+            <label>Temp:</label><br>
+            <input type="number" step="any" name="temp" placeholder="temp" required><br><br>
+
+            <label>Rain:</label><br>
+            <input type="number" step="any" name="rain" placeholder="rain" required><br><br>
+
+            <label>Snow:</label><br>
+            <input type="number" step="any" name="snow" placeholder="snow" required><br><br>
+
+            <label for="weather">Weather:</label>
+            <select name="weather" required>
+                <option value="Clouds">Clouds</option>
+                <option value="Clear">Clear</option>
+                <option value="Rain">Rain</option>
+                <option value="Snow">Snow</option>
+                <option value="Mist">Mist</option>
+                <option value="Fog">Fog</option>
+                <option value="Haze">Haze</option>
+                <option value="Thunderstorm">Thunderstorm</option>
+            </select><br><br>
+
+            <label>Year:</label><br>
+            <input type="number" name="year" placeholder="year" required><br><br>
+
+            <label>Month:</label><br>
+            <input type="number" name="month" placeholder="month" required><br><br>
+
+            <label>Day:</label><br>
+            <input type="number" name="day" placeholder="day" required><br><br>
+
+            <label>Hours:</label><br>
+            <input type="number" name="hours" placeholder="hours" required><br><br>
+
+            <label>Minutes:</label><br>
+            <input type="number" name="minutes" placeholder="minutes" required><br><br>
+
+            <label>Seconds:</label><br>
+            <input type="number" name="seconds" placeholder="seconds" required><br><br>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <h3 style="text-align:center;">{{ prediction_text }}</h3>
+    </div>
+
+</body>
+</html>
